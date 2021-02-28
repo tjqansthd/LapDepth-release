@@ -32,6 +32,7 @@ You can download pre-trained model
 |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
 | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
 | 0.970 | 0.996 | 0.999 |  0.057  | 0.155  | 1.788 |  0.085   |
+
 * [Trained with KITTI](https://drive.google.com/file/d/1Xxxo3Zw4kVwBw43i6akQqjX2Go8vdP4H/view?usp=sharing)
    - batch 16, GroupNorm, data loss + gradient loss
 
@@ -44,6 +45,7 @@ You can download pre-trained model
 |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
 | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
 | 0.968 | 0.996 | 0.999 |  0.057  | 0.155  | 1.807 |  0.085   |
+
 * [Trained with NYU Depth V2](https://drive.google.com/file/d/13WyHCmQINyzprCerkOBT_Pf_W-PbWzBi/view?usp=sharing)
    - batch 16, SyncBatchNorm, data loss
 |  a1   |  a2   |  a3   | Abs Rel | log10 | RMSE  | RMSE log |
