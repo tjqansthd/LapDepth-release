@@ -63,9 +63,9 @@ python demo.py --model_dir ./pretrained/LDRN_KITTI_ResNext101_pretrained_data.pk
 # output folder name => 'out_' + folder_name
 ```
  If you are using a model pre-trained from KITTI, insert **'`--pretrained KITTI`'** command (in the case of NYU, **'`--pretrained NYU`'**).
- If you run the demo on GPU, insert **'`--cuda`'**.
- **'`--gpu_num`'** argument is index list of your available GPUs you want to use (e.g., 0,1,2,3).
- ex) If you want to activate only the 3rd gpu out of 4 gpus, insert **'`--gpu_num 2`'**
+  If you run the demo on GPU, insert **'`--cuda`'**.
+  **'`--gpu_num`'** argument is an index list of your available GPUs you want to use (e.g., 0,1,2,3).
+  ex) If you want to activate only the 3rd gpu out of 4 gpus, insert **'`--gpu_num 2`'**
 
 ## Dataset Preparation
 We referred to [BTS](https://github.com/cogaplex-bts/bts) in the data preparation process.
