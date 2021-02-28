@@ -49,7 +49,7 @@ You can download pre-trained model
 | 0-10m | 0.895 | 0.983 | 0.996 |  0.105  | 0.045 | 0.384 |  0.135   |
 
 ## Demo images (Single Test Image Prediction)
-Make sure you download the pre-trained model and placed it in the './pretrained/' directory before running the demo.
+Make sure you download the pre-trained model and placed it in the './pretrained/' directory before running the demo.  
 Demo Command Line:
 ```bash
 ############### Example of argument usage #####################
@@ -62,7 +62,8 @@ python demo.py --model_dir ./pretrained/LDRN_NYU_ResNext101_pretrained_data.pkl 
 python demo.py --model_dir ./pretrained/LDRN_KITTI_ResNext101_pretrained_data.pkl --img_folder_dir ./your/folder/path/folder_name --pretrained KITTI --cuda --gpu_num 0
 # output folder name => 'out_' + folder_name
 ```
- If you are using a model pre-trained from KITTI, insert **'`--pretrained KITTI`'** command (in the case of NYU, **'`--pretrained NYU`'**).  
+ If you are using a model pre-trained from KITTI, insert **'`--pretrained KITTI`'** command  
+ (in the case of NYU, **'`--pretrained NYU`'**).  
  If you run the demo on GPU, insert **'`--cuda`'**.  
  **'`--gpu_num`'** argument is an index list of your available GPUs you want to use (e.g., 0,1,2,3).  
  ex) If you want to activate only the 3rd gpu out of 4 gpus, insert **'`--gpu_num 2`'**  
@@ -71,33 +72,27 @@ python demo.py --model_dir ./pretrained/LDRN_KITTI_ResNext101_pretrained_data.pk
 We referred to [BTS](https://github.com/cogaplex-bts/bts) in the data preparation process.
 
 ### KITTI
-**1. [Official ground truth](http://www.cvlibs.net/download.php?file=data_depth_annotated.zip)**
-
-    * Download official KITTI ground truth on the link and make KITTI dataset directory.
+**1. [Official ground truth](http://www.cvlibs.net/download.php?file=data_depth_annotated.zip)**  
+   * Download official KITTI ground truth on the link and make KITTI dataset directory.
 ```bash
     $ cd ./datasets
     $ mkdir KITTI && cd KITTI
     $ mv ~/Downloads/data_depth_annotated.zip ./datasets/KITTI
     $ unzip data_depth_annotated.zip
 ```
-**2. Raw dataset**
-
-    * Construct raw KITTI dataset using following commands.
+**2. Raw dataset**  
+   * Construct raw KITTI dataset using following commands.
 ```bash
     $ cd ./datasets/KITTI
     $ aria2c -x 16 -i ./datasets/kitti_archives_to_download.txt
     $ parallel unzip ::: *.zip
 ```
-**3. Dense g.t dataset**
-
-   We take an inpainting method from [DenseDepth](https://github.com/ialhashim/DenseDepth) to get dense g.t for gradient loss.
-   
-   (You can train our model using only data loss without gradient loss, then you don't need dense g.t)
-   
+**3. Dense g.t dataset**  
+   We take an inpainting method from [DenseDepth](https://github.com/ialhashim/DenseDepth) to get dense g.t for gradient loss.  
+   (You can train our model using only data loss without gradient loss, then you don't need dense g.t)  
    Corresponding inpainted results from **'`./datasets/KITTI/data_depth_annotated/2011_xx_xx_drive_xxxx_sync/proj_depth/groundtruth/image_02`'** are should be saved in **'`./datasets/KITTI/data_depth_annotated/2011_xx_xx_drive_xxxx_sync/dense_gt/image_02`'**.
 
-   * KITTI data structures are should be organized as below:
-
+   * KITTI data structures are should be organized as below:  
     |-- datasets
         |-- KITTI
             |-- data_depth_annotated
@@ -111,21 +106,21 @@ We referred to [BTS](https://github.com/cogaplex-bts/bts) in the data preparatio
             |-- ... (all days in the raw KITTI)
 
 ### NYU Depth V2
-**1. Training set**
-
+**1. Training set**  
     Make NYU dataset directory
 ```bash
     $ cd ./datasets
     $ mkdir NYU_Depth_V2 && cd NYU_Depth_V2
 ```
 * Constructing training data using following steps :
-    * Download Raw NYU Depth V2 dataset (450GB) from this **[Link](http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_raw.zip).**
-    * Extract the raw dataset into '`./datasets/NYU_Depth_V2`' (It should make **'`./datasets/NYU_Depth_V2/raw/....`'**).
-    * Run './datasets/sync_project_frames_multi_threads.m' to get synchronized data. (need Matlab) (It shoud make **'`./datasets/NYU_Depth_V2/sync/....`'**).
+    * Download Raw NYU Depth V2 dataset (450GB) from this **[Link](http://horatio.cs.nyu.edu/mit/silberman/nyu_depth_v2/nyu_depth_v2_raw.zip).**  
+    * Extract the raw dataset into '`./datasets/NYU_Depth_V2`'  
+    (It should make **'`./datasets/NYU_Depth_V2/raw/....`'**).  
+    * Run './datasets/sync_project_frames_multi_threads.m' to get synchronized data. (need Matlab)  
+    (It shoud make **'`./datasets/NYU_Depth_V2/sync/....`'**).  
 * Or, you can directly download whole 'sync' folder from our Google drive **[Link](https://drive.google.com/file/d/106oW6C7dfLHQYCNXZw9pn9q61ewNIZV1/view?usp=sharing)** into **'`./datasets/NYU_Depth_V2/`'**
 
-**2. Testing set**
-
+**2. Testing set**  
     Download official nyu_depth_v2_labeled.mat and extract image files from the mat file.
 ```bash
     $ cd ./datasets
@@ -151,7 +146,6 @@ python eval.py --model_dir ./pretrained/LDRN_NYU_ResNext101_pretrained_data.pkl 
 
 ## Training
 LDRN (Laplacian Depth Residual Network) training
-
 * Training Command Line:
 
 ```bash
@@ -162,9 +156,8 @@ python train.py --distributed --batch_size 16 --dataset NYU --data_path ./datase
 ## if you want to train using gradient loss, insert `--use_dense_depth` command
 ## if you don't want distributed training, remove `--distributed` command
 ```
- **'`--gpu_num`'** argument is index list of your available GPUs you want to use (e.g., 0,1,2,3).
- 
- ex) If you want to activate only the 3rd gpu out of 4 gpus, insert **'`--gpu_num 2`'**
+  **'`--gpu_num`'** argument is an index list of your available GPUs you want to use (e.g., 0,1,2,3).  
+  ex) If you want to activate only the 3rd gpu out of 4 gpus, insert **'`--gpu_num 2`'**
 
 ## Reference
 When using this code in your research, please cite the following paper:  
