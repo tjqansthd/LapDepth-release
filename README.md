@@ -27,6 +27,7 @@ You can download pre-trained model
 |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
 | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
 | 0.965 | 0.995 | 0.999 |  0.059  | 0.201  | 2.397 |  0.090   |
+
 [0-50m cap]
 |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
 | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
@@ -38,6 +39,7 @@ You can download pre-trained model
 |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
 | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
 | 0.961 | 0.994 | 0.999 |  0.059  | 0.209  | 2.489 |  0.091   |
+
 [0-50m cap]
 |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
 | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
