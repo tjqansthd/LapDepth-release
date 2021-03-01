@@ -92,8 +92,8 @@ We referred to [BTS](https://github.com/cogaplex-bts/bts) in the data preparatio
    (You can train our model using only data loss without gradient loss, then you don't need dense g.t)  
    Corresponding inpainted results from **'`./datasets/KITTI/data_depth_annotated/2011_xx_xx_drive_xxxx_sync/proj_depth/groundtruth/image_02`'** are should be saved in **'`./datasets/KITTI/data_depth_annotated/2011_xx_xx_drive_xxxx_sync/dense_gt/image_02`'**.
 
-   * KITTI data structures are should be organized as below:
-      |-- datasets  
+   * KITTI data structures are should be organized as below:  
+                  |-- datasets  
          |-- KITTI  
             |-- data_depth_annotated  
                |-- 2011_xx_xx_drive_xxxx_sync
