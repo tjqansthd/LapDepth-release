@@ -245,7 +245,7 @@ def train_net(args,model, optimizer, dataset_loader,val_loader, n_epochs,logger)
                 
                 if args.val_in_train is True:
                     print("=> validate...")
-                    a1_acc, rmse_test_loss = validate_in_test(args, val_loader, model,DtoD_model,n_epochs, logger,args.mode)
+                    a1_acc, rmse_test_loss = validate_in_test(args, val_loader, model, logger, args.dataset)
                     validate_plot(args.save_path,a1_acc, a1_acc_list, a1_acc_dir,a1_pdf, train_loss_cnt,True)         
 
         if (args.rank == 0):
