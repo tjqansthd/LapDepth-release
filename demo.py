@@ -130,7 +130,7 @@ for i, img_file in enumerate(img_list):
     out = out[0,0]
     
     if args.pretrained == 'KITTI':
-        out = out[int(org_h*0.18):,:]
+        out = out[int(out.shape[0]*0.18):,:]
         out = out*256.0
     elif args.pretrained == 'NYU':
         out = out*1000.0
