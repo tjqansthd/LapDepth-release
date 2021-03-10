@@ -26,29 +26,29 @@ You can download pre-trained model
 * [Trained with KITTI](https://drive.google.com/file/d/10Fsw3KbhiKj-rRkoIesghSPCn84TYY5P/view?usp=sharing)
    - batch 16, SyncBatchNorm, data loss
 
-|  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
-| :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
-| 0-80m | 0.965 | 0.995 | 0.999 |  0.059  | 0.201  | 2.397 |  0.090   |
+   |  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
+   | :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
+   | 0-80m | 0.965 | 0.995 | 0.999 |  0.059  | 0.201  | 2.397 |  0.090   |
 
-|  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
-| :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
-| 0-50m | 0.970 | 0.996 | 0.999 |  0.057  | 0.155  | 1.788 |  0.085   |
+   |  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
+   | :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
+   | 0-50m | 0.970 | 0.996 | 0.999 |  0.057  | 0.155  | 1.788 |  0.085   |
 * [Trained with KITTI](https://drive.google.com/file/d/1Xxxo3Zw4kVwBw43i6akQqjX2Go8vdP4H/view?usp=sharing)
    - batch 16, GroupNorm, data loss + gradient loss
 
-|  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
-| :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
-| 0-80m | 0.961 | 0.994 | 0.999 |  0.059  | 0.209  | 2.489 |  0.091   |
+   |  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
+   | :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
+   | 0-80m | 0.961 | 0.994 | 0.999 |  0.059  | 0.209  | 2.489 |  0.091   |
 
-|  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
-| :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
-| 0-50m | 0.968 | 0.996 | 0.999 |  0.057  | 0.155  | 1.807 |  0.085   |
+   |  cap  |  a1   |  a2   |  a3   | Abs Rel | Sq Rel | RMSE  | RMSE log |
+   | :---: | :---: | :---: | :---: | :-----: | :----: | :---: | :------: |
+   | 0-50m | 0.968 | 0.996 | 0.999 |  0.057  | 0.155  | 1.807 |  0.085   |
 * [Trained with NYU Depth V2](https://drive.google.com/file/d/13WyHCmQINyzprCerkOBT_Pf_W-PbWzBi/view?usp=sharing)
    - batch 16, SyncBatchNorm, data loss
 
-|  cap  |  a1   |  a2   |  a3   | Abs Rel | log10 | RMSE  | RMSE log |
-| :---: | :---: | :---: | :---: | :-----: | :---: | :---: | :------: |
-| 0-10m | 0.895 | 0.983 | 0.996 |  0.105  | 0.045 | 0.384 |  0.135   |
+   |  cap  |  a1   |  a2   |  a3   | Abs Rel | log10 | RMSE  | RMSE log |
+   | :---: | :---: | :---: | :---: | :-----: | :---: | :---: | :------: |
+   | 0-10m | 0.895 | 0.983 | 0.996 |  0.105  | 0.045 | 0.384 |  0.135   |
 
 ## Demo images (Single Test Image Prediction)
 Make sure you download the pre-trained model and placed it in the './pretrained/' directory before running the demo.  
