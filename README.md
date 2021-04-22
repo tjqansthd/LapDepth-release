@@ -1,6 +1,6 @@
 # LapDepth-release
- [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/monocular-depth-estimation-using-laplacian/monocular-depth-estimation-on-nyu-depth-v2)](https://paperswithcode.com/sota/monocular-depth-estimation-on-nyu-depth-v2?p=monocular-depth-estimation-using-laplacian)
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/monocular-depth-estimation-using-laplacian/monocular-depth-estimation-on-kitti-eigen)](https://paperswithcode.com/sota/monocular-depth-estimation-on-kitti-eigen?p=monocular-depth-estimation-using-laplacian)
+
 
 This repository is a Pytorch implementation of the paper [**"Monocular Depth Estimation Using Laplacian Pyramid-Based Depth Residuals"**](https://ieeexplore.ieee.org/document/9316778)
 
