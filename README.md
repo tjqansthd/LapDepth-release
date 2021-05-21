@@ -86,8 +86,9 @@ We referred to [BTS](https://github.com/cogaplex-bts/bts) in the data preparatio
 **2. Raw dataset**  
    * Construct raw KITTI dataset using following commands.
 ```bash
+    $ mv ./datasets/kitti_archives_to_download.txt ./datasets/KITTI
     $ cd ./datasets/KITTI
-    $ aria2c -x 16 -i ./datasets/kitti_archives_to_download.txt
+    $ aria2c -x 16 -i ./kitti_archives_to_download.txt
     $ parallel unzip ::: *.zip
 ```
 **3. Dense g.t dataset**  
