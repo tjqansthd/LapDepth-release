@@ -167,17 +167,18 @@ python train.py --distributed --batch_size 16 --dataset NYU --data_path ./datase
 ## Reference
 When using this code in your research, please cite the following paper:  
 
-M. Song, S. Lim and W. Kim, **"Monocular Depth Estimation Using Laplacian Pyramid-Based Depth Residuals,"** in **IEEE Transactions on Circuits and Systems for Video Technology**, doi: 10.1109/TCSVT.2021.3049869.
+M. Song, S. Lim and W. Kim, **"Monocular Depth Estimation Using Laplacian Pyramid-Based Depth Residuals,"** in **IEEE Transactions on Circuits and Systems for Video Technology**, vol. 31, no. 11, pp. 4381–4393, Nov. 2021.
 
 ```
 @ARTICLE{9316778,
   author={M. {Song} and S. {Lim} and W. {Kim}},
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
-  title={Monocular Depth Estimation Using Laplacian Pyramid-Based Depth Residuals}, 
+  title={Monocular Depth Estimation Using Laplacian Pyramid-Based Depth Residuals},
+  month={Nov.},
   year={2021},
-  volume={},
-  number={},
-  pages={1-1},
+  volume={31},
+  number={11},
+  pages={4381-4393},
   doi={10.1109/TCSVT.2021.3049869}}
 ```
 
